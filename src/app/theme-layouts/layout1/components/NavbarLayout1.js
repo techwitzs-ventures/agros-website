@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import LoginIcon from '@mui/icons-material/Login';
 import RocketIcon from '@mui/icons-material/Rocket';
+import { Link } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.background.default,
@@ -23,12 +24,16 @@ function NavbarLayout1(props) {
 
                     <div className="flex items-center px-8 md:px-0 h-full overflow-x-auto">
                         <Stack direction="row" spacing={2}>
-                            <Button variant="outlined" endIcon={<LoginIcon/>}>
-                               Login
-                            </Button>
-                            <Button variant='outlined' endIcon={<RocketIcon/>}>
-                               Get Started
-                            </Button>
+                            <Link to="https://app.dev.ecomsaas.click/" style={{ textDecoration: "none" }}>
+                                <Button variant="outlined" endIcon={<LoginIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
+                                    Login
+                                </Button>
+                            </Link>
+                            <Link to="https://onboard.dev.ecomsaas.click/">
+                                <Button variant='outlined' endIcon={<RocketIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
+                                    Get Started
+                                </Button>
+                            </Link>
                         </Stack>
                     </div>
                 </div>
