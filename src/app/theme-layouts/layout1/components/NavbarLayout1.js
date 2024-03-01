@@ -24,12 +24,12 @@ function NavbarLayout1(props) {
 
                     <div className="flex items-center px-8 md:px-0 h-full overflow-x-auto">
                         <Stack direction="row" spacing={2}>
-                            <Link to="https://app.dev.ecomsaas.click/" style={{ textDecoration: "none" }}>
+                            <Link to={`https://app.${process.env.REACT_APP_ENV_NAME}.ecomsaas.click/`} style={{ textDecoration: "none" }}>
                                 <Button variant="outlined" endIcon={<LoginIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
                                     Login
                                 </Button>
                             </Link>
-                            <Link to="https://onboard.dev.ecomsaas.click/">
+                            <Link to={`https://onboard.${process.env.REACT_APP_ENV_NAME}.ecomsaas.click/`}>
                                 <Button variant='outlined' endIcon={<RocketIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
                                     Get Started
                                 </Button>

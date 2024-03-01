@@ -18,7 +18,7 @@ import axios from 'axios';
 
 console.log(process.env.REACT_APP_ENV_NAME)
 if (process.env.REACT_APP_ENV_NAME === 'dev' && process.env.REACT_APP_ENABLE_MOCK_API) {
-  import('@mock-api')
+  // import('@mock-api')
 } else {
   /**
    * Axios HTTP Request defaults

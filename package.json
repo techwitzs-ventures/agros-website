@@ -141,6 +141,7 @@
         "start:development": "cp .env.dev .env && react-app-rewired start",
         "start:staging": "cp .env.staging .env && react-app-rewired start",
         "build:staging": "cp .env.staging .env && react-app-rewired build",
+        "build:development": "cp .env.dev .env && react-app-rewired build",
         "start:production": "cp .env.production .env && react-app-rewired start",
         "build:production": "cp .env.production .env && react-app-rewired build",
         "test": "react-app-rewired test --env=node",
