@@ -14,6 +14,7 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 function NavbarLayout1(props) {
+    console.log(process.env.REACT_APP_HOST_NAME)
     return (
         <Root className={clsx('w-full h-64 min-h-64 max-h-64 shadow-md', props.className)}>
             <div className="flex flex-auto items-center w-full h-full px-16 lg:px-24">
@@ -24,12 +25,12 @@ function NavbarLayout1(props) {
 
                     <div className="flex items-center px-8 md:px-0 h-full overflow-x-auto">
                         <Stack direction="row" spacing={2}>
-                            <Link to={`https://app.${process.env.REACT_APP_ENV_NAME}.ecomsaas.click/`} style={{ textDecoration: "none" }}>
+                            <Link to={`https://${process.env.REACT_APP_APP_URL}.${process.env.REACT_APP_HOST_NAME}/`} style={{ textDecoration: "none" }}>
                                 <Button variant="outlined" endIcon={<LoginIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
                                     Login
                                 </Button>
                             </Link>
-                            <Link to={`https://onboard.${process.env.REACT_APP_ENV_NAME}.ecomsaas.click/`}>
+                            <Link to={`https://${process.env.REACT_APP_ONBOARDING_URL}.${process.env.REACT_APP_HOST_NAME}/`}>
                                 <Button variant='outlined' endIcon={<RocketIcon />} style={{ color: "whitesmoke", borderColor: "whitesmoke" }}>
                                     Get Started
                                 </Button>
