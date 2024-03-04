@@ -14,7 +14,6 @@ const Root = styled('div')(({ theme }) => ({
 }));
 
 function NavbarLayout1(props) {
-    console.log(process.env.REACT_APP_HOST_NAME)
     return (
         <Root className={clsx('w-full h-64 min-h-64 max-h-64 shadow-md', props.className)}>
             <div className="flex flex-auto items-center w-full h-full px-16 lg:px-24">
