@@ -1,13 +1,11 @@
-import ECommerceAppConfig from './inventory/ECommerceAppConfig';
-import invoiceConfig from './invoice/invoiceConfig';
-import orderConfig from './order/orderConfig';
+import AboutUsAppConfig from './aboutus/AboutUsAppConfig';
+import ConatctUsAppConfig from './contactus/ContactUsAppConfig';
 import ProfileAppConfig from './profile/profileAppConfig';
 
 const appsConfigs = [
   ProfileAppConfig,
-  ECommerceAppConfig,
-  orderConfig,
-  invoiceConfig
+  ConatctUsAppConfig,
+  AboutUsAppConfig
 ];
 
 export default appsConfigs;

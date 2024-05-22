@@ -1,63 +1,31 @@
-import Hidden from '@mui/material/Hidden';
-import { styled, ThemeProvider } from '@mui/material/styles';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { navbarCloseMobile, selectFuseNavbar } from 'app/store/fuse/navbarSlice';
-import clsx from 'clsx';
+import { ThemeProvider } from '@mui/material/styles';
 import { memo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectFuseCurrentLayoutConfig, selectNavbarTheme } from 'app/store/fuse/settingsSlice';
-import NavbarLayout1 from './NavbarLayout1';
-import NavbarMobileLayout1 from './NavbarMobileLayout1';
+import { selectFuseNavbar } from 'app/store/fuse/navbarSlice';
+import NavbarStyle1 from './navbar/style-1/NavbarStyle1';
+import NavbarStyle2 from './navbar/style-2/NavbarStyle2';
+import NavbarStyle3 from './navbar/style-3/NavbarStyle3';
 import NavbarToggleFab from '../../shared-components/NavbarToggleFab';
 
-const StyledSwipeableDrawer = styled(SwipeableDrawer)(({ theme }) => ({
-  '& > .MuiDrawer-paper': {
-    height: '100%',
-    flexDirection: 'column',
-    flex: '1 1 auto',
-    width: 280,
-    minWidth: 280,
-    transition: theme.transitions.create(['width', 'min-width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.shorter,
-    }),
-  },
-}));
-
 function NavbarWrapperLayout1(props) {
-  const dispatch = useDispatch();
   const config = useSelector(selectFuseCurrentLayoutConfig);
-  const navbarTheme = useSelector(selectNavbarTheme);
   const navbar = useSelector(selectFuseNavbar);
+
+  const navbarTheme = useSelector(selectNavbarTheme);
 
   return (
     <>
       <ThemeProvider theme={navbarTheme}>
-        <Hidden lgDown>
-          <NavbarLayout1 className={clsx(props.className)} />
-        </Hidden>
-
-        <Hidden lgUp>
-          <StyledSwipeableDrawer
-            anchor="left"
-            variant="temporary"
-            open={navbar.mobileOpen}
-            onClose={() => dispatch(navbarCloseMobile())}
-            onOpen={() => { }}
-            disableSwipeToOpen
-            ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
-            }}
-          >
-            <NavbarMobileLayout1 />
-          </StyledSwipeableDrawer>
-        </Hidden>
+        <>
+          {config.navbar.style === 'style-1' && <NavbarStyle1 />}
+          {config.navbar.style === 'style-2' && <NavbarStyle2 />}
+          {config.navbar.style === 'style-3' && <NavbarStyle3 />}
+          {config.navbar.style === 'style-3-dense' && <NavbarStyle3 dense />}
+        </>
       </ThemeProvider>
-      {config.navbar.display && !config.toolbar.display && (
-        <Hidden lgUp>
-          <NavbarToggleFab />
-        </Hidden>
-      )}
+
+      {config.navbar.display && !config.toolbar.display && !navbar.open && <NavbarToggleFab />}
     </>
   );
 }

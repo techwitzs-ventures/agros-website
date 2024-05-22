@@ -1,5 +1,6 @@
 import { styled } from '@mui/material/styles';
 import config from '../../configs/navigation-i18n/en'
+
 const Root = styled('div')(({ theme }) => ({
   '& > .logo-icon': {
     transition: theme.transitions.create(['width', 'height'], {

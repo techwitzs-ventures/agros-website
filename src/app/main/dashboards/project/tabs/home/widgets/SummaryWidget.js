@@ -3,14 +3,10 @@ import Paper from '@mui/material/Paper';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import { memo, useState } from 'react';
-import MenuItem from '@mui/material/MenuItem';
-import { useSelector } from 'react-redux';
-import FuseSvgIcon from '@fuse/core/FuseSvgIcon';
-import { selectWidgets } from '../../../store/widgetsSlice';
-import { selectAllPurchaseOrders } from 'app/store/allPurchaseOrdersSlice';
+
 
 function SummaryWidget() {
-  const data = useSelector(selectAllPurchaseOrders);
+  const data = []
 
 
   return (

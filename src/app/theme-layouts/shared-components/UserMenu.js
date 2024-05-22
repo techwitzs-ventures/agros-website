@@ -33,7 +33,7 @@ function UserMenu(props) {
       >
         <div className="hidden md:flex flex-col mx-4 items-end">
           <Typography component="span" className="font-semibold flex">
-            {user.data.firstname} {user.data.lastname}
+            {user.data.displayName}
           </Typography>
           <Typography className="text-11 font-medium capitalize" color="text.secondary">
             {user.role.toString()}
@@ -44,7 +44,7 @@ function UserMenu(props) {
         {user.data.photoURL ? (
           <Avatar className="md:mx-4" alt="user photo" src={user.data.photoURL} />
         ) : (
-          <Avatar className="md:mx-4">{user.data.firstname[0]}</Avatar>
+          <Avatar className="md:mx-4">{user.data.displayName[0]}</Avatar>
         )}
       </Button>
 
@@ -86,6 +86,12 @@ function UserMenu(props) {
                 <FuseSvgIcon>heroicons-outline:user-circle</FuseSvgIcon>
               </ListItemIcon>
               <ListItemText primary="My Profile" />
+            </MenuItem>
+            <MenuItem component={Link} to="/apps/mailbox" onClick={userMenuClose} role="button">
+              <ListItemIcon className="min-w-40">
+                <FuseSvgIcon>heroicons-outline:mail-open</FuseSvgIcon>
+              </ListItemIcon>
+              <ListItemText primary="Inbox" />
             </MenuItem>
             <MenuItem
               component={NavLink}

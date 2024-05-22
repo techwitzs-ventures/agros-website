@@ -5,12 +5,6 @@ import FuseSplashScreen from '@fuse/core/FuseSplashScreen';
 import { showMessage } from 'app/store/fuse/messageSlice';
 import { logoutUser, setUser } from 'app/store/userSlice';
 import jwtService from './services/jwtService';
-import { getAllOrganization } from 'app/store/organizationSlice';
-import { getAllItems } from 'app/store/allItemsSlice';
-import { getAllItemsCategories } from 'app/store/allItemsCategoriesSlice';
-import { getAllPurchaseOrders } from 'app/store/allPurchaseOrdersSlice';
-import { getAllSalesOrders } from 'app/store/allSalesOrdersSlice';
-import { getAllInvoice } from 'app/store/allInvoicesSlice';
 
 const AuthContext = React.createContext();
 
@@ -65,13 +59,7 @@ function AuthProvider({ children }) {
       }
 
       Promise.all([
-        dispatch(setUser(user)),
-        dispatch(getAllOrganization()),
-        dispatch(getAllItems()),
-        dispatch(getAllItemsCategories()),
-        `${user.role === "plateformadmin" && dispatch(getAllPurchaseOrders())}`,
-        `${user.role === "plateformadmin" && dispatch(getAllSalesOrders())}`,
-        `${user.role === "plateformadmin" && dispatch(getAllInvoice())}`,
+        dispatch(setUser(user))
 
         // You can receive data in here before app initialization
       ]).then((values) => {
