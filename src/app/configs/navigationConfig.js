@@ -7,22 +7,29 @@ i18next.addResourceBundle('en', 'navigation', en);
 
 const navigationConfig = [
   {
-    id: 'aboutus',
-    title: 'About us',
+    id: 'home',
+    title: 'Home',
     type: 'item',
     auth: authRoles.onlyGuest,
-    icon: 'heroicons-outline:users',
-    translate: 'About us',
-    url: '/apps/about-us'
+    icon: 'heroicons-outline:home',
+    translate: 'Home',
+    url: '/apps/home'
   },
   {
-    id: 'contactus',
-    title: 'Contact us',
+    id: 'features',
+    title: 'Features',
     type: 'item',
     auth: authRoles.onlyGuest,
-    icon: 'material-outline:perm_phone_msg',
-    translate: 'Contact us',
-    url: '/apps/contact-us'
+    translate: 'Features',
+    url: '/apps/features'
+  },
+  {
+    id: 'how_it_works',
+    title: 'How it works',
+    type: 'item',
+    auth: authRoles.onlyGuest,
+    translate: 'How it works',
+    url: '/apps/how-it-works'
   },
   {
     id: 'signin',
@@ -31,16 +38,15 @@ const navigationConfig = [
     auth: authRoles.onlyGuest,
     icon: 'material-outline:login',
     translate: 'Sign in',
-    url: 'https://develop.d3u7ml2c0tfxhv.amplifyapp.com/'
+    url: 'https://feature.d3u7ml2c0tfxhv.amplifyapp.com/'
   },
   {
     id: 'signup',
     title: 'Get started',
     type: 'item',
     auth: authRoles.onlyGuest,
-    icon: 'heroicons-outline:home',
     translate: 'Get started',
-    url: 'https://develop.d3uu4km723ivc2.amplifyapp.com/'
+    url: 'https://feature.d3uu4km723ivc2.amplifyapp.com/'
   },
 ];
 
