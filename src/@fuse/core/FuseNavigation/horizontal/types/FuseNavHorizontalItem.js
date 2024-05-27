@@ -8,10 +8,8 @@ import { memo, useMemo } from 'react';
 import withRouter from '@fuse/core/withRouter';
 import FuseNavBadge from '../../FuseNavBadge';
 import FuseSvgIcon from '../../../FuseSvgIcon';
-import RocketIcon from '@mui/icons-material/Rocket';
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
-  marginLeft: "10px",
   borderRadius: 4,
   color: theme.palette.text.primary,
   textDecoration: 'none!important',
@@ -20,17 +18,6 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
     backgroundColor: `${theme.palette.secondary.main}!important`,
     color: `${theme.palette.secondary.contrastText}!important`,
     pointerEvents: 'none',
-    '& .fuse-list-item-text-primary': {
-      color: 'inherit',
-    },
-    '& .fuse-list-item-icon': {
-      color: 'inherit',
-    },
-  },
-  '&.sign-signup-active': {
-    backgroundColor: `${theme.palette.secondary.main}!important`,
-    color: `${theme.palette.secondary.contrastText}!important`,
-    pointerEvents: 'cursor',
     '& .fuse-list-item-text-primary': {
       color: 'inherit',
     },
@@ -54,23 +41,19 @@ function FuseNavHorizontalItem(props) {
         component={NavLinkAdapter}
         to={item.url || ''}
         activeClassName={item.url ? 'active' : ''}
-        className={clsx('fuse-list-item', item.active && 'active', item.id === 'signup' && 'sign-signup-active', item.id === 'signin' && 'sign-signup-active')}
+        className={clsx('fuse-list-item', item.active && 'active')}
         end={item.end}
         role="button"
         sx={item.sx}
         disabled={item.disabled}
       >
-        {item.icon && item.id !== 'signup' && (
+        {item.icon && (
           <FuseSvgIcon
             className={clsx('fuse-list-item-icon shrink-0', item.iconClass)}
             color="action"
           >
             {item.icon}
           </FuseSvgIcon>
-        )}
-
-        {item.id === "signup" && (
-          <RocketIcon />
         )}
 
         <ListItemText

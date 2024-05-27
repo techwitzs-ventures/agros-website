@@ -21,10 +21,7 @@ function Logo() {
     <Root className="flex items-center">
       {/* <img className="logo-icon w-32 h-32" src="assets/images/logo/logo.svg" alt="logo" /> */}
 
-      <div
-        className="badge flex items-center py-4 px-8 mx-8 rounded"
-        style={{ backgroundColor: '#121212', color: '#ffff'}}
-      >
+      <div className="badge flex items-center py-4 px-8 mx-8 rounded">
         <span className="text-20 mx-4">{config.APPLICATION_NAME}</span>
       </div>
     </Root>

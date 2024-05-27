@@ -11,7 +11,6 @@ const navigationConfig = [
     title: 'Home',
     type: 'item',
     auth: authRoles.onlyGuest,
-    icon: 'heroicons-outline:home',
     translate: 'Home',
     url: '/apps/home'
   },
@@ -36,7 +35,6 @@ const navigationConfig = [
     title: 'Sign in',
     type: 'item',
     auth: authRoles.onlyGuest,
-    icon: 'material-outline:login',
     translate: 'Sign in',
     url: 'https://feature.d3u7ml2c0tfxhv.amplifyapp.com/'
   },
