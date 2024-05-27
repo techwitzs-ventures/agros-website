@@ -42,7 +42,7 @@ function FooterLayout2(props) {
 
           <div className="flex grow shrink-0 px-12 justify-end">
             {/* <PoweredByLinks /> */}
-            <motion.div variants={container} initial="hidden" animate="show" className="flex items-center">
+            {/* <motion.div variants={container} initial="hidden" animate="show" className="flex items-center">
               <Link
                 className="mx-4 px-4 flex"
                 to="/apps/about-us"
@@ -73,7 +73,7 @@ function FooterLayout2(props) {
                   Contact us
                 </Typography>
               </Link>
-            </motion.div>
+            </motion.div> */}
           </div>
         </Toolbar>
       </AppBar>

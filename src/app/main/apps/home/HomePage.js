@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import Section1 from './components/section1';
+import Section2 from './components/section2';
+import Section3 from './components/section3';
 
 const HomePage = () => {
+
   return (
-    <div className='flex justify-center items-center'>Home Page....</div>
-  )
+    <>
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section2 />
+      <Section3 />
+      <Section2 />
+      <Section3 />
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;

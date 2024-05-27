@@ -8,6 +8,9 @@ import Navigation from '../../shared-components/Navigation';
 const Root = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
+  position: "sticky",
+  top: 0,
+  zIndex: 50
 }));
 
 function NavbarLayout2(props) {
