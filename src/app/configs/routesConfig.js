@@ -22,7 +22,7 @@ const routes = [
   ...FuseUtils.generateRoutesFromConfigs(routeConfigs, settingsConfig.defaultAuth),
   {
     path: '/',
-    element: <Navigate to="/" />
+    element: <Navigate to="/apps/home" />
   },
   {
     path: 'loading',
