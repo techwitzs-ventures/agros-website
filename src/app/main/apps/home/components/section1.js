@@ -14,7 +14,7 @@ const styles = {
         top: '30%',
         left: '20%',
         transform: 'translateY(-50%)',
-        color: '#ffffff',
+        color: '#004b1c',
         zIndex: 10,
     },
     buttonOverlay: {
@@ -30,7 +30,7 @@ const styles = {
     imageWrapper: {
         height: '100%',
         width: '100%',
-        backgroundColor: "#004b1c"
+        backgroundColor: "#e3ece5"
     },
     image: {
         width: '100%',
@@ -57,11 +57,6 @@ const Section1 = () => {
             <div style={styles.textOverlay}>
                 <h1 style={styles.text}>Welcome to {config.APPLICATION_NAME}</h1>
                 <p style={styles.subtitleText}>Your Ultimate Agros B2B</p>
-            </div>
-            <div style={styles.buttonOverlay}>
-                <button>
-                    About us
-                </button>
             </div>
             <div style={styles.imageWrapper}>
                 {/* <img src="assets/images/new/carouselimage1.jpg" alt="Image" style={styles.image} /> */}
