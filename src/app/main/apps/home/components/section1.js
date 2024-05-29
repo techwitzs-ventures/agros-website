@@ -20,7 +20,7 @@ const styles = {
     buttonOverlay: {
         position: 'absolute',
         top: '60%',
-        left: '20%',
+        left: '50%',
         transform: 'translateY(-50%)',
         color: 'white',
         zIndex: 10,

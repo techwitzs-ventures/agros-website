@@ -47,9 +47,9 @@ const Section2 = () => {
         <div style={styles.container}>
             <div style={styles.innerContainer}>
                 <div style={styles.leftSidePanel}>
-                    <div style={styles.leftSidePaneldiv1}>
+                    {/* <div style={styles.leftSidePaneldiv1}>
                         <h1 style={styles.text}>Get To Know Us</h1>
-                    </div>
+                    </div> */}
                     <div style={styles.leftSidePaneldiv2}>
                         {/* <p style={{
                             width: "90%",
