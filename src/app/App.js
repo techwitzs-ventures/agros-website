@@ -1,30 +1,27 @@
 import BrowserRouter from '@fuse/core/BrowserRouter';
 import FuseLayout from '@fuse/core/FuseLayout';
 import FuseTheme from '@fuse/core/FuseTheme';
-import { SnackbarProvider } from 'notistack';
 import { useSelector } from 'react-redux';
 import rtlPlugin from 'stylis-plugin-rtl';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { selectCurrentLanguageDirection } from 'app/store/i18nSlice';
-import { selectUser } from 'app/store/userSlice';
 import themeLayouts from 'app/theme-layouts/themeLayouts';
 import { selectMainTheme } from 'app/store/fuse/settingsSlice';
-import FuseAuthorization from '@fuse/core/FuseAuthorization';
-import settingsConfig from 'app/configs/settingsConfig';
 import withAppProviders from './withAppProviders';
-import { AuthProvider } from './main/apps/accounts/auth/AuthContext';
 import axios from 'axios';
+import awsmobile from 'src/aws-exports';
 
 if (process.env.REACT_APP_ENV_NAME === 'dev' && process.env.REACT_APP_ENABLE_MOCK_API) {
+
   // import('@mock-api')
+
 } else {
-  /**
-   * Axios HTTP Request defaults
-   */
-  axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL
-  // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
+  axios.defaults.baseURL = awsmobile.aws_cloud_logic_custom[0].endpoint
+
   axios.defaults.headers.common['Content-Type'] = 'application/json';
+
 }
 
 const emotionCacheOptions = {

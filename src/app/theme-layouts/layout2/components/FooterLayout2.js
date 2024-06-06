@@ -6,6 +6,8 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFooterTheme } from 'app/store/fuse/settingsSlice';
 import { motion } from 'framer-motion';
+import config from '../../../../appConfig';
+
 
 function FooterLayout2(props) {
   const footerTheme = useSelector(selectFooterTheme);
@@ -29,7 +31,7 @@ function FooterLayout2(props) {
       >
         <Toolbar className="min-h-48 md:min-h-64 px-8 sm:px-12 lg:px-20 py-0 flex items-center overflow-x-auto">
           <div className="flex grow shrink-0">
-            @ Copyright agroshub
+            @ Copyright {config.application_name}
           </div>
 
           <div className="flex grow shrink-0 px-12 justify-end">
