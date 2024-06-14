@@ -2,6 +2,7 @@ import i18next from 'i18next';
 
 import en from './navigation-i18n/en';
 import authRoles from '../main/apps/accounts/auth/authRoles';
+import config from 'src/appConfig';
 
 i18next.addResourceBundle('en', 'navigation', en);
 
@@ -36,7 +37,7 @@ const navigationConfig = [
     type: 'item',
     auth: authRoles.onlyGuest,
     translate: 'Sign in',
-    url: 'https://feature.d3u7ml2c0tfxhv.amplifyapp.com/'
+    url: config.signin_url
   },
   {
     id: 'signup',
@@ -44,7 +45,7 @@ const navigationConfig = [
     type: 'item',
     auth: authRoles.onlyGuest,
     translate: 'Get started',
-    url: 'https://feature.d3uu4km723ivc2.amplifyapp.com/'
+    url: config.signup_url
   },
 ];
 

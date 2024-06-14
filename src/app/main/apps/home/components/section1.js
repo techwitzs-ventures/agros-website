@@ -1,6 +1,5 @@
 import React from 'react'
-
-import config from '../../../../configs/navigation-i18n/en'
+import config from 'src/appConfig';
 
 
 const styles = {
@@ -55,7 +54,7 @@ const Section1 = () => {
     return (
         <div style={styles.container}>
             <div style={styles.textOverlay}>
-                <h1 style={styles.text}>Welcome to {config.APPLICATION_NAME}</h1>
+                <h1 style={styles.text}>Welcome to {config.application_name}</h1>
                 <p style={styles.subtitleText}>Your Ultimate Agros B2B</p>
             </div>
             <div style={styles.imageWrapper}>

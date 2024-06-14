@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import * as yup from 'yup';
 import _ from '@lodash';
-import config from '../../../../configs/navigation-i18n/en';
 import { showMessage } from 'app/store/fuse/messageSlice';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -18,6 +17,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import JwtService from '../auth/services/jwtService';
 import OtpPage from '../otp/otpPage';
 import { LoadingButton } from '@mui/lab';
+import config from 'src/appConfig';
 
 const schema = yup.object().shape({
   email: yup.string().email('Enter a valid email').required('Enter a Email'),
@@ -135,7 +135,7 @@ function SignUpPage() {
         <div className="z-10 relative w-full max-w-2xl">
           <div className="text-7xl font-bold leading-none text-gray-100">
             <div>Welcome to</div>
-            <div>{config.APPLICATION_NAME}</div>
+            <div>{config.application_name}</div>
           </div>
         </div>
       </Box>
