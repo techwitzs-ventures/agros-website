@@ -12,7 +12,7 @@ import withAppProviders from './withAppProviders';
 import axios from 'axios';
 import awsmobile from 'src/aws-exports';
 
-if (process.env.REACT_APP_ENV_NAME === 'dev' && process.env.REACT_APP_ENABLE_MOCK_API) {
+if (process.env.REACT_APP_ENV_NAME === 'develop' && process.env.REACT_APP_ENABLE_MOCK_API) {
 
   // import('@mock-api')
 
