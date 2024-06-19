@@ -7,7 +7,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        height:"350px",
+        // height:"350px",
     },
     innerContainer: {
         display: "flex",
@@ -46,11 +46,11 @@ const Section2 = () => {
         <div style={styles.container}>
             <div style={styles.innerContainer}>
                 <div style={styles.leftSidePanel}>
-                    {/* <div style={styles.leftSidePaneldiv1}>
+                    <div style={styles.leftSidePaneldiv1}>
                         <h1 style={styles.text}>Get To Know Us</h1>
-                    </div> */}
+                    </div>
                     <div style={styles.leftSidePaneldiv2}>
-                        {/* <p style={{
+                        <p style={{
                             width: "90%",
                             lineHeight: "35px",
                             letterSpacing: "0.2px",
@@ -59,13 +59,13 @@ const Section2 = () => {
                             textAlign: "justify",
                         }}>
                             Agriculture is the backbone of our society, and at Agros Hub, we are committed to empowering farmers, suppliers, and buyers in the agricultural industry. Our advanced and user-friendly Agros Hub Software Platform is designed to bring together all the key players in the agros ecosystem, fostering collaboration and promoting sustainable growth. With Agros Hub, we aim to bridge the gap between traditional farming practices and modern digital solutions, offering a seamless online hub where farmers can showcase their products, suppliers can connect with a global customer base, and buyers can find a diverse range of agricultural products and services.
-                        </p> */}
+                        </p>
                     </div>
                 </div>
                 <div style={styles.rightSidePanel}>
-                    {/* <video src="assets/gif/agroshubgif.mp4" autoPlay loop muted style={{ width: '90%', height: '857px' }}>
+                    <video src="assets/gif/agroshubgif.mp4" autoPlay loop muted style={{ width: '90%', height: '857px' }}>
                         Your browser does not support the video tag.
-                    </video> */}
+                    </video>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        backgroundColor: "#e3ece5"
+        // height:"350px",
     },
     innerContainer: {
         display: "flex",
@@ -21,6 +21,7 @@ const styles = {
     leftSidePaneldiv1: {
         display: "flex",
         justifyContent: "center",
+        backgroundColor: "#ffffff"
     },
     leftSidePaneldiv2: {
         display: "flex",
@@ -40,7 +41,7 @@ const styles = {
         fontWeight: "bold"
     },
 }
-const Section3 = () => {
+const Section4 = () => {
     return (
         <div style={styles.container}>
             <div style={styles.innerContainer}>
@@ -71,4 +72,4 @@ const Section3 = () => {
     )
 }
 
-export default Section3
+export default Section4

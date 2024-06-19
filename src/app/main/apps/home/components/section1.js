@@ -58,7 +58,7 @@ const Section1 = () => {
                 <p style={styles.subtitleText}>Your Ultimate Agros B2B</p>
             </div>
             <div style={styles.imageWrapper}>
-                {/* <img src="assets/images/new/carouselimage1.jpg" alt="Image" style={styles.image} /> */}
+                <img src="assets/images/new/carouselimage1.jpg" alt="Image" style={styles.image} />
             </div>
         </div>
     )
