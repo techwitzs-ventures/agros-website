@@ -1,8 +1,11 @@
 import React from 'react'
+import Section1 from './components/section1'
 
 const FeaturesPage = () => {
   return (
-    <div className='flex justify-center items-center'>Faetures Page....</div>
+    <>
+      <Section1 />
+    </>
   )
 }
 

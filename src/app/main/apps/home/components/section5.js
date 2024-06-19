@@ -40,7 +40,7 @@ const styles = {
         fontWeight: "bold"
     },
 }
-const Section3 = () => {
+const Section5 = () => {
     return (
         <div style={styles.container}>
             <div style={styles.innerContainer}>
@@ -71,4 +71,4 @@ const Section3 = () => {
     )
 }
 
-export default Section3
+export default Section5

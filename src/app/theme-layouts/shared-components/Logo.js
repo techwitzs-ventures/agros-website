@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import config from '../../configs/navigation-i18n/en'
+import config from 'src/appConfig';
 
 const Root = styled('div')(({ theme }) => ({
   '& > .logo-icon': {
@@ -22,7 +22,7 @@ function Logo() {
       {/* <img className="logo-icon w-32 h-32" src="assets/images/logo/logo.svg" alt="logo" /> */}
 
       <div className="badge flex items-center py-4 px-8 mx-8 rounded">
-        <span className="text-20 mx-4">{config.APPLICATION_NAME}</span>
+        <span className="text-2xl font-semibold mx-4">{config.application_name}</span>
       </div>
     </Root>
   );
