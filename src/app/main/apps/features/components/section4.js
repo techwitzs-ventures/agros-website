@@ -8,17 +8,18 @@ const styles = {
         fontWeight: "bold"
     },
 }
-const Section1 = () => {
+
+const Section4 = () => {
     return (
 
-        <div style={{ marginTop: "70px", paddingBottom: "30px", paddingTop: "30px", backgroundColor: "#ffffff" }}>
+        <div style={{ paddingBottom: "30px", paddingTop: "30px" }}>
             <div style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column"
             }}>
-                <h3 style={styles.text}>Global Reach</h3>
+                <h3 style={styles.text}>Mobile App Access</h3>
                 <p style={{
                     width: "90%",
                     lineHeight: "35px",
@@ -28,11 +29,11 @@ const Section1 = () => {
                     overflowWrap: "break-word",
                     textAlign: "center",
                 }}>
-                    Agros Hub's mobile app ensures that users stay connected and responsive even while on the go. Farmers can manage their listings, suppliers can respond to inquiries, and buyers can complete transactions from the convenience of their smartphones. The app offers a seamless user experience, enhancing accessibility and usability for all.
+                    Data-driven decisions lead to better outcomes. Agros Hub provides comprehensive analytics and insights, offering valuable information about market trends, popular products, and customer preferences. With access to such data, users can identify opportunities, strategize effectively, and stay ahead in the competitive agricultural market.
                 </p>
             </div>
         </div>
     )
 }
 
-export default Section1
+export default Section4
