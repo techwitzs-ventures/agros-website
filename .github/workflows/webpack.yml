@@ -15,3 +15,4 @@ jobs:
     - run: git remote add github https://varanasiramesh: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@github.com/startup-ventures/agros-website.git
     - run: git remote set-url --add --push origin https://varanasiramesh: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@github.com/startup-ventures/agros-website.git
     - run: git push -f -u github main
+    
