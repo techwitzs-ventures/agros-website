@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: echo "Hello"
-    - run: git remote set-url --push https://github.com/techwitzs-ventures/agros-website-test.git
+    - run: git remote set-url --add --push origin https://github.com/techwitzs-ventures/agros-website-test.git 
     - run: git branch -M main
     - run: git push -u origin main
     
