@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: echo "Hello"
-    - run: git remote set-url origin --push --add harness https://git.harness.io/xtFPfyCaR_Crf1m40r40zQ/default/AgrosHub_App/agros-website.git
+    - run: git remote set-url origin --push harness https://git.harness.io/xtFPfyCaR_Crf1m40r40zQ/default/AgrosHub_App/agros-website.git
     - run: git branch -M main
     - run:  git push -u origin harness
     
