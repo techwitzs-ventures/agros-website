@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: echo "Hello"
-    - run: git remote add upstream git@github.com:varanasiramesh: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/techwitzs-ventures/agros-website-test.git 
-    - run: git remote set-url --add --push upstream git@github.com:varanasiramesh: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/techwitzs-ventures/agros-website-test.git 
+    - run: git remote add upstream https://varanasiramesh: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@github.com/techwitzs-ventures/agros-website-test.git 
+    - run: git remote set-url --add --push upstream https://varanasiramesh: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@github.com/techwitzs-ventures/agros-website-test.git
     - run: git branch -M main
     - run: git push -u upstream main
     
